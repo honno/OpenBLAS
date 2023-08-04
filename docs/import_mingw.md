@@ -1,3 +1,5 @@
+# Generate import library for MinGW
+
 Microsoft Windows has this thing called "import libraries". You don't need it in MinGW because the `ld` linker from GNU Binutils is smart, but you may still want it for whatever reason.
 
 ## Make the `.def`

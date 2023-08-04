@@ -1,3 +1,5 @@
+# Installation guide
+
 ## Quick Installation
 [Precompiled packages](https://github.com/xianyi/OpenBLAS/wiki/Precompiled-installation-packages) have recently become available for a number of platforms through their normal installation procedures, so for users of desktop devices at least, the instructions below are mostly relevant when you want to try the most recent development snapshot from git.
 

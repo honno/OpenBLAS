@@ -1,11 +1,3 @@
-##### Table of Contents  
-[Compile the library](#compile-the-library)  
-[Link the library](#link-the-library)  
-[Code examples](#code-examples)  
-[Troubleshooting](#troubleshooting)  
-[BLAS reference manual](#blas-reference-manual)  
- 
-
 ## Compile the library
 ### Normal compile
   * type `make` to detect the CPU automatically.

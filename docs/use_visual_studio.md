@@ -1,3 +1,5 @@
+# Using OpenBLAS in Visual Studio
+
 As of OpenBLAS v0.2.15, we support MinGW and Visual Studio (using CMake to generate visual studio solution files &ndash; note that you will need at least version 3.11 of CMake for linking to work correctly) to build OpenBLAS on Windows.
 
 Note that you need a Fortran compiler if you plan to build and use the LAPACK functions included with OpenBLAS. The sections below describe using either `flang` as an add-on to clang/LLVM or `gfortran` as part of MinGW for this purpose. If you want to use the Intel Fortran compiler `ifort` for this, be sure to also use the Intel C compiler `icc` for building the C parts, as the ABI imposed by `ifort` is incompatible with `msvc`.

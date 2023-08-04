@@ -1,6 +1,7 @@
-**This page is made by someone who is not the developer and should not be considered as an official documentation of the build system. For getting the full picture, it is best to read the Makefiles and understand them yourself.**
+!!! warning
+    This page is made by someone who is not the developer and should not be considered as an official documentation of the build system. For getting the full picture, it is best to read the Makefiles and understand them yourself.
 
-### Makefile dep graph
+## Makefile dep graph
 
 ```
 Makefile                                                        
@@ -39,12 +40,12 @@ Makefile
 |~~~~~ relapack/
 ```
 
-### Important Variables
+## Important Variables
 
 Most of the tunable variables are found in [Makefile.rule](https://github.com/xianyi/OpenBLAS/blob/develop/Makefile.rule), along with their detailed descriptions.<br/>
 Most of the variables are detected automatically in [Makefile.prebuild](https://github.com/xianyi/OpenBLAS/blob/develop/Makefile.prebuild), if they are not set in the environment.
 
-#### CPU related
+### CPU related
 ```
 ARCH         - Target architecture (eg. x86_64)
 TARGET       - Target CPU architecture, in case of DYNAMIC_ARCH=1 means library will not be usable on less capable CPUs
@@ -52,7 +53,7 @@ TARGET_CORE  - TARGET_CORE will override TARGET
 DYNAMIC_ARCH - For building library for multiple ARCHs (does not lose any optimizations, but increases library size)
 ```
 
-#### Toolchain related
+### Toolchain related
 ```
 CC                 - TARGET C compiler used for compilation (can be cross-toolchains)
 FC                 - TARGET Fortran compiler used for compilation (can be cross-toolchains, set NOFORTRAN=1 if used cross-toolchain has no fortran compiler)
@@ -62,7 +63,7 @@ HOSTCC             - compiler of build machine, needed to create proper config f
 HOST_CFLAGS        - flags for build machine compiler
 ```
 
-#### Library related
+### Library related
 ```
 BINARY          - 32/64 bit library
 

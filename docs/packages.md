@@ -1,5 +1,7 @@
 # Precompiled installation packages
-_note this list is not comprehensive, is not meant to validate nor endorse a particular third-party build over others and may not always lead to the newest version_
+
+!!! note
+    This list is not comprehensive, is not meant to validate nor endorse a particular third-party build over others and may not always lead to the newest version
 
 ## Multiple operating systems
 Binaries designed to be compatible with [Julia](https://github.com/JuliaLang/julia) are regularly provided in
@@ -25,7 +27,7 @@ Example installation commands:
 ```
  Alternatively, if distributor's package proves unsatisfactory, you may try latest version of OpenBLAS, [Following guide in OpenBLAS FAQ](https://github.com/xianyi/OpenBLAS/wiki/faq#debianlts)
  
-### openSuSE/SLE: 
+### openSuSE/SLE
  Recent OpenSUSE versions include OpenBLAS in default repositories and also permit OpenBLAS to act as replacement of system-wide BLAS.
 
  Example installation commands:
