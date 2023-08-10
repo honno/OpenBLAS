@@ -31,7 +31,7 @@ Again, there is basically **no point** in making an import library for use in Mi
 
 Unlike MinGW, MSVC absolutely requires an import library. Now the C ABI of MSVC and MinGW are actually identical, so linking is actually okay. (Any incompatibility in the C ABI would be a bug.)
 
-The import libraries of MSVC have the suffix `.lib`. They are generated from a `.def` file using MSVC's `lib.exe`. See [the MSVC instructions](https://github.com/xianyi/OpenBLAS/wiki/How-to-use-OpenBLAS-in-Microsoft-Visual-Studio#generate-import-library-before-0210-version).
+The import libraries of MSVC have the suffix `.lib`. They are generated from a `.def` file using MSVC's `lib.exe`. See [the MSVC instructions](use_visual_studio.md#generate-import-library-before-0210-version).
 
 ## Notes
 * Always remember that MinGW is **not the same** as MSYS2 or Cygwin. MSYS2 and Cygwin are full POSIX environments with a lot of magic such as `fork()` and its own `malloc()`. MinGW, which builds on the normal Microsoft C Runtime, has none of that. Be clear about which one you are building for.

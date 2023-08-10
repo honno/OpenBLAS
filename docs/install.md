@@ -1,9 +1,14 @@
 # Installation guide
 
 ## Quick Installation
-[Precompiled packages](https://github.com/xianyi/OpenBLAS/wiki/Precompiled-installation-packages) have recently become available for a number of platforms through their normal installation procedures, so for users of desktop devices at least, the instructions below are mostly relevant when you want to try the most recent development snapshot from git.
+[Precompiled packages](packages.md) have recently become available for a number of platforms through their normal installation procedures, so for users of desktop devices at least, the instructions below are mostly relevant when you want to try the most recent development snapshot from git.
 
-### Linux
+You can download them from [file hosting on sourceforge.net](http://sourceforge.net/projects/openblas/files/). We provide binary packages for Windows x86/x86_64 and ARM.
+
+## Source
+Download the latest [stable version](https://github.com/xianyi/OpenBLAS/releases) from release page.
+
+## Linux
 
 Just type `make` to compile the library.
 
@@ -13,9 +18,9 @@ Notes
   the virtual environment matches that of an existing CPU to allow detection of the cpu model to succeed. 
   (With qemu, this can be done by passing `-cpu host` or a supported model name at invocation)
 
-### Windows
+## Windows
 
-See [[How-to-use-OpenBLAS-in-Microsoft-Visual-Studio]].
+See [Using OpenBLAS in Visual Studio](use_visual_studio.md).
 
 The precompiled binaries available with each release (in https://github.com/xianyi/OpenBLAS/releases) are
 created with MinGW (as described in Section 2 of the wiki page mentioned above) using an option list of 
@@ -34,11 +39,11 @@ documentation of whatever program you are using with OpenBLAS mentions 64bit int
 addressing huge matrix sizes, you will need to build OpenBLAS from source (or open an issue ticket to make
 the demand for such a precompiled build known).
 
-### Mac OSX
+## Mac OSX
 
 If your CPU is Sandy Bridge, please use Clang version 3.1 and above. The Clang 3.0 will generate the wrong AVX binary code of OpenBLAS.
 
-#### Build on Apple M1
+### Build on Apple M1
 
 * without Fortran compiler （cannot build LAPACK)
 ```
@@ -49,7 +54,7 @@ If your CPU is Sandy Bridge, please use Clang version 3.1 and above. The Clang 3
     $ export MACOSX_DEPLOYMENT_TARGET=11.0
     $ make CC=cc FC=gfortran
 ```
-### FreeBSD
+## FreeBSD
 
 You will need to install the following tools from the FreeBSD ports tree:
 * lang/gcc [1]
@@ -66,8 +71,8 @@ Note that you need to build with GNU make and manually specify the compiler, oth
 
 [1]: [Removal of Fortran from the FreeBSD base system](http://www.bsdunix.ch/serendipity/index.php?/archives/345-Removal-of-Fortran-from-the-FreeBSD-base-system.html)
 
-### Android 
-See [this page](https://github.com/xianyi/OpenBLAS/wiki/How-to-build-OpenBLAS-for-Android)
+## Android
+See [this page](build/android.md)
 
-### MIPS
-See [this page](https://github.com/xianyi/OpenBLAS/wiki/Faq#mips)
+## MIPS
+See [this page](faq.md#mips)

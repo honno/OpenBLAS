@@ -25,7 +25,7 @@ Example installation commands:
   $ sudo apt install libopenblas-dev
   $ sudo update-alternatives --config libblas.so.3
 ```
- Alternatively, if distributor's package proves unsatisfactory, you may try latest version of OpenBLAS, [Following guide in OpenBLAS FAQ](https://github.com/xianyi/OpenBLAS/wiki/faq#debianlts)
+ Alternatively, if distributor's package proves unsatisfactory, you may try latest version of OpenBLAS, [Following guide in OpenBLAS FAQ](faq.md#debianlts)
  
 ### openSuSE/SLE
  Recent OpenSUSE versions include OpenBLAS in default repositories and also permit OpenBLAS to act as replacement of system-wide BLAS.
