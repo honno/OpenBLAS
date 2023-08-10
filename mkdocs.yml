@@ -9,19 +9,13 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - toc:
+      toc_depth: 4
 nav:
   - index.md
   - install.md
-  - packages.md
   - user_manual.md
   - faq.md
-  - use_visual_studio.md
-  - use_cortex.md
-  - import_mingw.md
-  - build/android.md
-  - build/ios.md
-  - build/m1.md
-  - build/win_arm.md
   - extensions.md
   - developers.md
   - build_system.md

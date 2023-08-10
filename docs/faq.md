@@ -24,7 +24,6 @@
 + **[How to solve undefined reference errors when statically linking against libopenblas.a](#static_link)**
 + **[Building OpenBLAS for Haswell or Dynamic Arch on RHEL-6, CentOS-6, Rocks-6.1](#binutils)**
 + **[Building OpenBLAS in QEMU/KVM/XEN](#qemu)**
-+ **[Building OpenBLAS for MIPS](#mips)**
 + **[Building OpenBLAS on POWER fails with the IBM XL compiler](#ppcxl)**
 + **[Replacing system BLAS in Ubuntu/Debian](#debianlts)**
 + **[I built OpenBLAS for use with some other software, but that software cannot find it](#findblas)**
@@ -249,42 +248,6 @@ By default, QEMU reports the CPU as "QEMU Virtual CPU version 2.2.0", which shar
 Similarly, the XEN hypervisor may not pass through all features of the host cpu while reporting the cpu type itself correctly, which can
 lead to compiler error messages about an "ABI change" when compiling AVX512 code. Again changing the Xen configuration by running e.g. 
 "xen-cmdline --set-xen cpuid=avx512" should get around this (as would building OpenBLAS for an older cpu lacking that particular feature, e.g. TARGET=HASWELL)
-
-### <a name="mips"></a>Building OpenBLAS for MIPS
-
-For mips targets you will need latest toolchains
-P5600 - MTI GNU/Linux Toolchain
-I6400, P6600 - IMG GNU/Linux Toolchain
-
-The download link is below
-(http://codescape-mips-sdk.imgtec.com/components/toolchain/2016.05-03/downloads.html)
-
-You can use following commandlines for builds
-
-
-    IMG_TOOLCHAIN_DIR={full IMG GNU/Linux Toolchain path including "bin" directory -- for example, /opt/linux_toolchain/bin}
-    IMG_GCC_PREFIX=mips-img-linux-gnu
-    IMG_TOOLCHAIN=${IMG_TOOLCHAIN_DIR}/${IMG_GCC_PREFIX}
-
-    I6400 Build (n32):
-    make BINARY=32 BINARY32=1 CC=$IMG_TOOLCHAIN-gcc AR=$IMG_TOOLCHAIN-ar FC="$IMG_TOOLCHAIN-gfortran -EL -mabi=n32" RANLIB=$IMG_TOOLCHAIN-ranlib HOSTCC=gcc CFLAGS="-EL" FFLAGS=$CFLAGS LDFLAGS=$CFLAGS TARGET=I6400
-
-    I6400 Build (n64):
-    make BINARY=64 BINARY64=1 CC=$IMG_TOOLCHAIN-gcc AR=$IMG_TOOLCHAIN-ar FC="$IMG_TOOLCHAIN-gfortran -EL" RANLIB=$IMG_TOOLCHAIN-ranlib HOSTCC=gcc CFLAGS="-EL" FFLAGS=$CFLAGS LDFLAGS=$CFLAGS TARGET=I6400
-
-    P6600 Build (n32):
-    make BINARY=32 BINARY32=1 CC=$IMG_TOOLCHAIN-gcc AR=$IMG_TOOLCHAIN-ar FC="$IMG_TOOLCHAIN-gfortran -EL -mabi=n32" RANLIB=$IMG_TOOLCHAIN-ranlib HOSTCC=gcc CFLAGS="-EL" FFLAGS=$CFLAGS LDFLAGS=$CFLAGS TARGET=P6600
-
-    P6600 Build (n64):
-    make BINARY=64 BINARY64=1 CC=$IMG_TOOLCHAIN-gcc AR=$IMG_TOOLCHAIN-ar FC="$IMG_TOOLCHAIN-gfortran -EL" RANLIB=$IMG_TOOLCHAIN-ranlib HOSTCC=gcc CFLAGS="-EL" FFLAGS="$CFLAGS" LDFLAGS="$CFLAGS" TARGET=P6600
-
-    MTI_TOOLCHAIN_DIR={full MTI GNU/Linux Toolchain path including "bin" directory -- for example, /opt/linux_toolchain/bin}
-    MTI_GCC_PREFIX=mips-mti-linux-gnu
-    MTI_TOOLCHAIN=${IMG_TOOLCHAIN_DIR}/${IMG_GCC_PREFIX}
-
-    P5600 Build:
-
-    make BINARY=32 BINARY32=1 CC=$MTI_TOOLCHAIN-gcc AR=$MTI_TOOLCHAIN-ar FC="$MTI_TOOLCHAIN-gfortran -EL"    RANLIB=$MTI_TOOLCHAIN-ranlib HOSTCC=gcc CFLAGS="-EL" FFLAGS=$CFLAGS LDFLAGS=$CFLAGS TARGET=P5600
 
 ### <a name="ppcxl"></a>Building OpenBLAS on POWER fails with IBM XL
 
