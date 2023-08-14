@@ -39,7 +39,7 @@ Example:
 
 The default directory is /opt/OpenBLAS. Note that any flags passed to `make` during build should also be passed to `make install` to circumvent any install errors, i.e. some headers not being copied over correctly.
 
-For more information, please read [Installation Guide](Installation-Guide).
+For more information, please read [Installation Guide](install.md).
 
 ## Link the library
 
@@ -176,4 +176,4 @@ gcc -o time_dgemm time_dgemm.c /your/path/libopenblas.a
 
 If you want to understand every BLAS function and definition, please read [Intel MKL reference manual](https://software.intel.com/en-us/intel-mkl/documentation) or [netlib.org](http://netlib.org/blas/)
 
-Here are [OpenBLAS extension functions](OpenBLAS-Extensions)
+Here are [OpenBLAS extension functions](extensions.md)

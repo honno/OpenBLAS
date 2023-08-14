@@ -96,7 +96,7 @@ Please provide the following information: CPU, OS, compiler, and OpenBLAS compil
 
 ### <a name="publication"></a>How to reference OpenBLAS.
 
-You can reference our papers in [this page](Publications). Alternatively, you can cite the OpenBLAS homepage  http://www.openblas.net.
+You can reference our papers in [this page](publications.md). Alternatively, you can cite the OpenBLAS homepage  http://www.openblas.net.
 
 ### <a name="multi-threaded"></a>How can I use OpenBLAS in multi-threaded applications?
 
@@ -138,7 +138,7 @@ Here is the result of the DGEMM subroutine's performance on Intel Core i5-2500K 
 
 ### <a name="MSVC"></a>How can I call an OpenBLAS function in Microsoft Visual Studio?
 
-Please read [this page](How-to-use-OpenBLAS-in-Microsoft-Visual-Studio).
+Please read [this page](install.md#visual-studio).
 
 ### <a name="C99_complex_number"></a>How can I use CBLAS and LAPACKE without C99 complex number support (e.g. in Visual Studio)?
 

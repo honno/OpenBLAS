@@ -104,7 +104,7 @@ the demand for such a precompiled build known).
 * <http://sourceforge.net/projects/openblas/files>
 * <https://www.nuget.org/packages?q=openblas>
 
-#### Using OpenBLAS in Visual Studio
+#### Visual Studio
 
 As of OpenBLAS v0.2.15, we support MinGW and Visual Studio (using CMake to generate visual studio solution files &ndash; note that you will need at least version 3.11 of CMake for linking to work correctly) to build OpenBLAS on Windows.
 
