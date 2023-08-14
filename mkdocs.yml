@@ -15,7 +15,6 @@ nav:
   - index.md
   - install.md
   - user_manual.md
-  - faq.md
   - extensions.md
   - developers.md
   - build_system.md
@@ -27,3 +26,4 @@ nav:
   - publications.md
   - mailing_list.md
   - donate.md
+  - faq.md
